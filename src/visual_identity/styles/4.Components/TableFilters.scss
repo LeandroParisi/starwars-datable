@@ -1,0 +1,21 @@
+@import '../0.helpers/variables';
+@import '../0.helpers/mixins';
+
+.filters-container {
+  @include flexCenter(column);
+  width: 90%;
+  margin: auto;
+
+  & >input {
+    width: 20%;
+  }
+
+  & .secondary-filters {
+    @include flexCenter(row, space-between);
+    width: 100%;
+
+    & .column-filter-selector, .assortment-filters {
+      @include flexCenter(column);
+    }
+  }
+}

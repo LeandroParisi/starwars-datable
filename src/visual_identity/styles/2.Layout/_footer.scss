@@ -1,0 +1,9 @@
+@import '../0.helpers/variables';
+@import '../0.helpers/mixins';
+
+footer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  @include flexCenter(column)
+}

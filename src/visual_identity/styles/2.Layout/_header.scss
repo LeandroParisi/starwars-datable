@@ -1,0 +1,17 @@
+@import '../0.helpers/variables';
+@import '../0.helpers/mixins';
+
+header {
+  width: 100vw;
+  @include flexCenter(column);
+  margin-bottom: 5%;
+
+  & .logo {
+    width: calc(150px + 1vw);
+  }
+  
+  & h1 {
+    color: $bananaYellow;
+    text-align: center;
+  }
+}

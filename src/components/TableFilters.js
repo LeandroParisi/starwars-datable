@@ -32,19 +32,21 @@ function TableFilters() {
   }
 
   return (
-    <section>
+    <section className="filters-container">
       <input
         type="text"
         data-testid="name-filter"
         placeholder="Filter by Name"
         onChange={ (event) => setNameFilter(event.target.value) }
       />
-      <NumericFilterRow
-        currentFilters={ currentFilters }
-        saveFilter={ saveFilter }
-      />
-      <SortFilterRow />
-      <div>
+      <section className="secondary-filters">
+        <NumericFilterRow
+          currentFilters={ currentFilters }
+          saveFilter={ saveFilter }
+        />
+        <SortFilterRow />
+      </section>
+      <div className="selected-filters">
         <p>
           Selected Filters:
           {selectedFilters.map((filter) => (
