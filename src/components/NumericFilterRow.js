@@ -43,6 +43,7 @@ function NumericFilterRow({ currentFilters, saveFilter }) {
 
   return (
     <div className="column-filter-selector">
+      <h4>Filter</h4>
       <select
         onChange={ handleColumnSelect }
         data-testid="column-filter"

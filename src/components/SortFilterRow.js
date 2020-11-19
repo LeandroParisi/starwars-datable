@@ -41,6 +41,7 @@ function SortFilterRow() {
 
   return (
     <div className="assortment-filters">
+      <h4>Sort</h4>
       <select data-testid="column-sort" onChange={ handleSelectChange }>
         <option>-- Sort alphabetically --</option>
         {tableHeaders.map((header) => (
@@ -48,7 +49,7 @@ function SortFilterRow() {
             {header}
           </option>))}
       </select>
-      <label htmlFor="ascending">
+      <div className="assortment-radios-container">
         <input
           id="ascending"
           type="radio"
@@ -56,9 +57,9 @@ function SortFilterRow() {
           data-testid="column-sort-input-asc"
           onClick={ handleRadioCheck }
         />
-        Ascendente
-      </label>
-      <label htmlFor="descending">
+        <label htmlFor="ascending">Ascendente</label>
+      </div>
+      <div className="assortment-radios-container">
         <input
           id="descending"
           type="radio"
@@ -66,8 +67,8 @@ function SortFilterRow() {
           data-testid="column-sort-input-desc"
           onClick={ handleRadioCheck }
         />
-        Descendente
-      </label>
+        <label htmlFor="descending">Descendente</label>
+      </div>
       <button
         type="button"
         data-testid="column-sort-button"

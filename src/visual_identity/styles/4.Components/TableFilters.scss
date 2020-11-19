@@ -4,18 +4,35 @@
 .filters-container {
   @include flexCenter(column);
   width: 90%;
+  height: 35vh;
   margin: auto;
 
   & >input {
     width: 20%;
   }
 
+  & h4 {
+    color: $bananaYellow;
+  }
+
   & .secondary-filters {
     @include flexCenter(row, space-between);
     width: 100%;
+    height: 100%;
 
     & .column-filter-selector, .assortment-filters {
-      @include flexCenter(column);
+      @include flexCenter(column, space-between);
+      height: 100%;
+
+      & .assortment-radios-container {
+        @include flexCenter(row, space-around);
+        width: 70%;
+        margin: auto;
+
+        & label {
+          margin-left: -10%;
+        }
+      }
     }
   }
 }

@@ -23,3 +23,9 @@ input, select {
     color: $bananaYellow;
   }
 }
+
+input[type=radio] {
+  background-color: $bananaYellow;
+  width: 40%;
+  color: red;
+}
